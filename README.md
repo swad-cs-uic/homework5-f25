@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+## Homework 5
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Quickstart
 
-Currently, two official plugins are available:
+Create a new **private** repository under your own GitHub account
+from [this template](https://github.com/swad-cs-uic/homework5-f24).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installing required packages
 
-## React Compiler
+Open the terminal window and type in `npm install`. This will install all the
+dependencies listed in the `package.json` file.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Skeleton code
 
-## Expanding the ESLint configuration
+The homework provided is focused on optimizing React applications using various
+performance-enhancing techniques. You will work through four main problems, each
+highlighting a different optimization strategy:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Memoize expensive calculation results with useMemo
+- Prevent UI blocking with Web Workers
+- Optimize event handlers with useCallback and memo
+- Virtualize long lists with react-window
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Running the application
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+To run the application, type `npm run dev` in the terminal. This will start the development server and open the application in your default web browser.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Deliverables
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Your submission should properly implement optimization techniques according to the
+instructions for each of the problems.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Testing
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To test your implementation, run `npm run test`.
+
+## Points Breakdown
+
+- **Problem 1**: 25 points
+- **Problem 2**: 25 points
+- **Problem 3**: 25 points
+- **Problem 4**: 25 points
+
+## Extra Credit
+
+You can earn extra credit by implementing meaningful test cases for problem 4.
+
+## Due Date
+
+This homework is due on **Friday, December 6, 2024 02:00 PM**.
